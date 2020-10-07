@@ -1,6 +1,6 @@
 # REACT ARTICLES GRAPHQL API
 
-This is the GraphQl API database [MongoDB](https://www.mongodb.com/) conection layer developed for the main project REACT ARTICLES, this API has it's own auto documentation, please enjoy.
+This is the GraphQl API database [MongoDB](https://www.mongodb.com/) conection layer developed for the main project [REACT ARTICLES](https://github.com/eduardohurtado/react-articles), this API has it's own auto documentation, please enjoy.
 
 ## API requirements
 
