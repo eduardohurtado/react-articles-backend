@@ -3,28 +3,30 @@ import resolvers from "../controller/resolver";
 
 const typeDefs = `
     type Query{
-        hello: String
-        greet(name: String!): String
-        tasks: [Task]
+        articles: [Article]
     }
 
     type Mutation{
-        createTask(input: TaskInput): Task
-        deleteTask(_id: ID): Task
-        updateTask(_id: ID, input: TaskInput): Task
+        createArticle(input: ArticleInput): Article
+        deleteArticle(_id: ID): Article
+        updateArticle(_id: ID, input: ArticleInput): Article
     }
 
-    type Task{
+    type Article{
         _id: ID
+        name: String!
+        lastName: String!
+        gender: String!
         title: String!
         description: String!
-        done: Boolean
     }
 
-    input TaskInput{
+    input ArticleInput{
+        name: String!
+        lastName: String!
+        gender: String!
         title: String!
         description: String!
-        done: Boolean
     }
 `;
 

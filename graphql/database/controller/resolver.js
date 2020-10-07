@@ -1,39 +1,25 @@
 //Models
-import Task from "../models/taskModel";
+import Article from "../models/taskModel";
 
 //Controller -> GraphQL resolvers
 const resolvers = {
   Query: {
-    hello: () => {
-      return "Hello world with GraphQL";
-    },
-    greet(root, { name }, ctx) {
-      console.log(name);
-      console.log(ctx);
-      return `Hello ${name}!`;
-    },
-    async tasks() {
-      return await Task.find();
+    async articles() {
+      return await Article.find();
     },
   },
   Mutation: {
-    async createTask(_, { input }) {
-      if (!input.done) {
-        input.done = false;
-      }
+    async createArticle(_, { input }) {
       console.log(input);
-      const newTask = new Task(input);
-      await newTask.save();
-      return newTask;
+      const newArticle = new Article(input);
+      await newArticle.save();
+      return newArticle;
     },
-    async deleteTask(_, { _id }) {
-      return await Task.findByIdAndDelete(_id);
+    async deleteArticle(_, { _id }) {
+      return await Article.findByIdAndDelete(_id);
     },
-    async updateTask(_, { _id, input }) {
-      if (!input.done) {
-        input.done = false;
-      }
-      return await Task.findByIdAndUpdate(_id, input, { new: true });
+    async updateArticle(_, { _id, input }) {
+      return await Article.findByIdAndUpdate(_id, input, { new: true });
     },
   },
 };
