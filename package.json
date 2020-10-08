@@ -4,7 +4,8 @@
   "description": "",
   "main": "graphql/index.js",
   "scripts": {
-    "start": "nodemon --exec babel-node graphql/index.js"
+    "start": "node --exec babel-node graphql/index.js",
+    "dev": "nodemon --exec babel-node graphql/index.js"
   },
   "keywords": [],
   "author": "",
