@@ -4,8 +4,7 @@
   "description": "",
   "main": "graphql/index.js",
   "scripts": {
-    "start": "node --exec babel-node graphql/index.js",
-    "dev": "nodemon --exec babel-node graphql/index.js"
+    "start": "nodemon --exec babel-node graphql/index.js"
   },
   "keywords": [],
   "author": "",
@@ -21,11 +20,11 @@
     "graphql": "^15.3.0",
     "graphql-tools": "^6.2.4",
     "mongoose": "^5.10.8",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.4"
   },
   "devDependencies": {
     "eslint": "^7.10.0",
-    "eslint-plugin-node": "^11.1.0",
-    "nodemon": "^2.0.4"
+    "eslint-plugin-node": "^11.1.0"
   }
 }
