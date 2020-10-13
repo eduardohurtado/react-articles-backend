@@ -4,7 +4,7 @@
   "description": "",
   "main": "graphql/index.js",
   "scripts": {
-    "start": "nodemon --exec babel-node graphql/index.js"
+    "start": "nodemon --exec babel-node api/index.js"
   },
   "keywords": [],
   "author": "",
@@ -13,12 +13,9 @@
     "@babel/cli": "^7.11.6",
     "@babel/core": "^7.11.6",
     "@babel/node": "^7.10.5",
-    "@babel/plugin-proposal-class-properties": "^7.10.4",
     "@babel/preset-env": "^7.11.5",
     "express": "^4.17.1",
-    "express-graphql": "^0.11.0",
-    "graphql": "^15.3.0",
-    "graphql-tools": "^6.2.4",
+    "graphql-yoga": "^1.18.3",
     "mongoose": "^5.10.8",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.4"
