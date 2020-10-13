@@ -5,7 +5,7 @@ import path from "path";
 import "./database/database";
 
 server.use(morgan("dev"));
-server.express.use("/", express.static(path.join(__dirname, "../build")));
+server.express.use("/", express.static(path.join(__dirname, "../../build")));
 
 const options = {
   port: process.env.PORT || 8080,
