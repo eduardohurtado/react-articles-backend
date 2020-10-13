@@ -1,17 +1,19 @@
 import Article from "../../models/articleModel";
 
 const Mutation = {
-  createArticle: async (_, { input }) => {
+  createArticle: async (_, { input }, { pubsub }) => {
     console.log(input);
     const newArticle = new Article(input);
-    return await newArticle.save();
+    await newArticle.save();
+    pubsub.publish("CHAT_CHANNEL", { articleSent: newArticle });
+    return newArticle;
   },
 
   deleteArticle: async (_, { _id }) => {
     return await Article.findByIdAndDelete(_id);
   },
 
-  async updateArticle(_, { _id, input }) {
+  updateArticle: async (_, { _id, input }) => {
     return await Article.findByIdAndUpdate(_id, input, { new: true });
   },
 };

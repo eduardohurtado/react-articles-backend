@@ -9,6 +9,10 @@ type Mutation {
   updateArticle(_id: ID, input: ArticleInput): Article
 }
 
+type Subscription {
+  articleSent: Article
+}
+
 type Article {
   _id: ID
   name: String!
