@@ -1,4 +1,4 @@
-import { GraphQLServer, PubSub, withFilter } from "graphql-yoga";
+import { GraphQLServer, PubSub } from "graphql-yoga";
 import path from "path";
 import resolvers from "../graphql/resolvers";
 
